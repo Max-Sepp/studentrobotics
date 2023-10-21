@@ -1,0 +1,10 @@
+april-vision==2.1.0
+numpy==1.26.1
+paho-mqtt==1.6.1
+pyapriltags==3.3.0.3
+pydantic==1.10.13
+pyquaternion==0.9.9
+pyserial==3.5
+sr-robot3==2024.0.1
+typing_extensions==4.8.0
+winsdk==1.0.0b10
