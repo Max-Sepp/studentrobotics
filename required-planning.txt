@@ -1,0 +1,10 @@
+// DESIGN //
+How to grab and store boxes
+How to operate omniD wheels
+Shape
+
+// SOFTWARE //
+General strategy (aggressive, defensive)
+Find out how to calculate distances and identify unique boxes
+Find out how to move each piece of equipment
+Coordinate movement
