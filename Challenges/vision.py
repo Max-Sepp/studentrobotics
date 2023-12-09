@@ -36,7 +36,7 @@ def Vision_Challenge_Distance():
             else:
                 robot.kch.leds[LED_C].colour = Colour.OFF
 
-            if marker.position.horizontal_angle > -math.atan(0.2/marker.position.distance) and marker.position.horizontal_angle < math.atan(0.2/marker.position.distance):
+            if -math.atan(0.2/marker.position.distance) < marker.position.horizontal_angle < math.atan(0.2/marker.position.distance):
                 robot.kch.leds[LED_B].colour = Colour.YELLOW
             else:
                 robot.kch.leds[LED_B].colour = Colour.OFF
