@@ -28,21 +28,24 @@ def Vision_Challenge_Angle():
                 robot.kch.leds[LED_C].colour = Colour.OFF
 
 def Vision_Challenge_Distance():
+    while True:
+        markers = robot.camera.see()
+        for marker in markers:
+            if marker.position.horizontal_angle > math.atan(0.2/distance):
+                robot.kch.leds[LED_C].colour = Colour.BLUE
+            else:
+                robot.kch.leds[LED_C].colour = Colour.OFF
 
-    if marker.position.horizontal_angle > math.atan(0.2/distance):
-        robot.kch.leds[LED_C].colour = Colour.BLUE
-    else:
-        robot.kch.leds[LED_C].colour = Colour.OFF
+            if marker.position.horizontal_angle > -math.atan(0.2/distance) and marker.position.horizontal_angle < math.atan(0.2/distance):
+                robot.kch.leds[LED_B].colour = Colour.YELLOW
+            else:
+                robot.kch.leds[LED_B].colour = Colour.OFF
 
-    if marker.position.horizontal_angle > -math.atan(0.2/distance) and marker.position.horizontal_angle < math.atan(0.2/distance):
-        robot.kch.leds[LED_B].colour = Colour.YELLOW
-    else:
-        robot.kch.leds[LED_B].colour = Colour.OFF
-
-    if marker.position.horizontal_angle < -math.atan(0.2/distance):
-        robot.kch.leds[LED_A].colour = Colour.BLUE
-    else:
-        robot.kch.leds[LED_A].colour = Colour.OFF
+            if marker.position.horizontal_angle < -math.atan(0.2/distance):
+                robot.kch.leds[LED_A].colour = Colour.BLUE
+            else:
+                robot.kch.leds[LED_A].colour = Colour.OFF
 
 
-Vision_Challenge_Angle()
+#Vision_Challenge_Angle()
+Vision_Challenge_Distance()
