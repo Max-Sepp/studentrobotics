@@ -3,8 +3,8 @@ import math
 robot = Robot()
 
 def Vision_Challenge_Angle():
-    markers = robot.camera.see()
     while True:
+        markers = robot.camera.see()
         for marker in markers:
             print("Marker #{0} is {1} metres away".format(marker.id,
             marker.position.distance / 1000))
