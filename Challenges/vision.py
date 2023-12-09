@@ -31,6 +31,8 @@ def Vision_Challenge_Distance():
     while True:
         markers = robot.camera.see()
         for marker in markers:
+            print("HA: " +str(marker.position.horizontal_angle))
+            print("ATAN: " +str(math.atan(0.2/marker.position.distance)))
             if marker.position.horizontal_angle > math.atan(0.2/marker.position.distance):
                 robot.kch.leds[LED_C].colour = Colour.BLUE
             else:
