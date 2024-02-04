@@ -1,6 +1,3 @@
-from gettext import find
-from turtle import left
-from closestMarkerAndDist import closestMarkerAndDist, findBoundaryMarkers
 from sr.robot3 import *
 
 def spin(robot):
